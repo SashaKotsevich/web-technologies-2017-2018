@@ -1,36 +1,36 @@
-H3{
+.h3st{
     font-weight: normal;
     margin-left: 40px;
 }
 
-H1{
+.h1st{
     font-size: 30px;
     font-weight: normal;
     margin-left: 40px;
 }
 
-P{
+.pst{
     margin-left: 40px;
 }
 
-BODY{
+.bodyst{
     background: #ede7f6;
     font-family: Arial;
 }
 
-ARTICLE{
+.articlest{
     font-size: 18px;
     margin-top: 35px;
 }
 
-HEADER{
+.headerst{
     background: #673ab7;
     height: 250px;
     margin: -8px;
 
 }
 
-FOOTER{
+.footerst{
     color: #757575;
     font-size: 12px;
     margin: -120px auto;
@@ -39,12 +39,12 @@ FOOTER{
 
 }
 
-.AddFileInp{
+.add-file-inp{
     opacity: 0;
     z-index: 0;
 }
 
-.AddFileButton{
+.add-file-button{
     color: #0000ff;
     font-weight: lighter;
     height: 20px;
@@ -54,26 +54,26 @@ FOOTER{
 
 }
 
-.Astrix{
+.astrix{
     color:#ff0000;
 }
 
-.BottomHint{
+.bottom-hint{
     color: #757575;
     font-size: 12px;
 }
 
-.Check{
+.check{
     height: 18px;
     width: 18px;
 }
 
-.ContentTopLine{
+.content-top-line{
     background: #b388ff;
     height: 8px;
 }
 
-.ContentPanel{
+.content-panel{
     background: white;
     box-shadow: 0px 0px 1px #000000;
     margin: -120px auto 130px auto;
@@ -88,19 +88,19 @@ FOOTER{
     height: 35px;
 }
 
-.Hint{
+.hint{
     color: #ff0000;
     font-size: 14px;
 }
 
-.InputTextStyle{
+.input-text-style{
     border: none;
     border-bottom: dotted 1px gray;
     margin-left: 40px;
     width: 250px;
 }
 
-.InpText1{
+.inp-text1{
     border-right: none;
     border-left: none;
     border-bottom: dotted 1px  #808080;
@@ -109,7 +109,7 @@ FOOTER{
     width: 500px;
 }
 
-.OtherInputTextStyle{
+.other-input-text-style{
     border: none;
     border-bottom: dotted 1px  #808080;
 }
@@ -121,7 +121,7 @@ FOOTER{
     width: 18px;
 }
 
-.Select{
+.select{
     border: none;
     color: #bababa;
     height: 30px;
@@ -129,7 +129,7 @@ FOOTER{
     width: 80px;
 }
 
-.Submit{
+.submit{
     background: #4285f4;
     border: none ;
     border-radius: 5px;
