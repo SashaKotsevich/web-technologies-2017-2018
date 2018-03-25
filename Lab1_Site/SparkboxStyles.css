@@ -1,20 +1,20 @@
     @import url('https://fonts.googleapis.com/css?family=Bowlby+One+SC');
-    html{
+    .html-style{
         font-family: sans-serif;
     }
-    body{
+    .body-style{
         display: flex;
         flex: auto;
         flex-direction:  column;
         margin: 0;
     }
-    a{
+    .a-style{{
         margin-right: 25px;
     }
 
 
 
-    .MenuBar{
+    .menu-bar{
         align-items: center;
         display: flex;
         flex-direction: row;
@@ -23,13 +23,13 @@
         margin-top: 15px;
 
     }
-    .LogoLeft{
+    .logo-left{
         height: 35px;
         margin-left: 30px;
         opacity: 0.7;
 
     }
-    .MenuItem{
+    .menu-item{
         color: #000000;
         font-size: 15px ;
         font-family: Arial;
@@ -41,7 +41,7 @@
         text-decoration: none;
 
     }
-    .MenuItem:hover{
+    .menu-item:hover{
         border-bottom: 2px solid #800080;
         color: #000000;
         font-size: 15px ;
@@ -54,10 +54,10 @@
         text-decoration: none;
 
     }
-    .MainLogo:hover{
+    .main-logo:hover{
         opacity: 0.5;
     }
-    .DropdownMenuItem{
+    .dorpdown-menu-item{
         color: #000000;
         font-size: 25px ;
         font-family: Arial;
@@ -68,22 +68,22 @@
         text-decoration: none;
         text-align: end;
     }
-    .SpecialMenuItem{
+    .special-menu-item{
         background: #a3dae3;
         padding: 10px 7px 10px 7px;
     }
-    .SpecialMenuItem:hover{
+    .special-menu-item:hover{
         background: rgba(234, 255, 255, 0.99);
         padding: 10px 7px 10px 7px;
     }
-    .ContentPart{
+    .content-part{
         align-items: center;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
         margin-top: 17%;
     }
-    .thirdlinetxt{
+    .thirdline-txt{
         color: #ffffff;
         flex-basis:content-box ;
         font-size: 18px;
@@ -94,7 +94,7 @@
         text-align: center;
 
     }
-    .FirstPanel{
+    .first-panel{
         align-items: center;
         background: #e5e5e5;
         display: flex;
@@ -103,7 +103,7 @@
         padding-bottom: 10%;
 
     }
-    .FirstPanelColumns{
+    .first-panel-columns{
         align-items: stretch;
         display: flex;
         flex-direction: row;
@@ -111,13 +111,13 @@
         margin-top: 3%;
         justify-content: space-around;
     }
-    .SecondPanel{
+    .second-panel{
         align-items: center;
         background: #d9d9d9;
         display: flex;
         flex-direction: column;
     }
-    .ScndPanFrstLine{
+    .scnd-panel-frst-line{
         alignment: center;
         text-align: center;
         color: #1c4c55;
@@ -127,7 +127,7 @@
         padding-right: 8%;
         padding-left: 8%;
     }
-    .ScndPanScndLine{
+    .scnd-panel-scnd-line{
         color: #1c4c55;
         font-size: 17px;
         margin-left: 10%;
@@ -139,7 +139,7 @@
         display: flex;
         flex-basis: 80%;
     }
-    .HumanImg {
+    .human-img {
         margin-top: 4%;
         padding-left: 8%;
         grid-area: 1/1/2/2;
@@ -150,14 +150,14 @@
         to {height:  275px;}
 
     }
-    @keyframes menuitem {
+    @keyframes menu-item {
         from{font-size: 0px; padding-top: 0px ;}
         to {font-size: 15px; padding-top: 10px;}
 
     }
 
 
-    .ThirthPanelHeaderLine{
+    .thirth-panel-header-line{
         grid-area: 2/1/3/2;
         font-size: 35px;
         font-weight: bolder;
@@ -165,27 +165,27 @@
 
     }
     @media (min-width: 360px) {
-        .LogoRight{
+        .logo-right{
             height: 35px;
             opacity: 0.7;
         }
 
     }
     @media (max-width: 360px) {
-        .LogoRight{
+        .logo-right{
            display: none;
         }
 
     }
     @media (min-width: 1000px) {
 
-        .ThirthPanel{
+        .thirth-panel{
             background: #ffffff;
             display: grid;
             grid-template:  10% 10% 25% 30% 5% 20%/2fr 1fr;
 
         }
-        .ThirthPanelFirstLine{
+        .thirth-panel-first-line{
             font-size: 17px;
             flex-basis: 30%;
             grid-area: 3/1/4/2;
@@ -201,12 +201,12 @@
             width: 300px;
 
         }
-        .Sect{
+        .sect{
             background: url(Images/Back.png)no-repeat center center;
             grid-area: 1/2/7/3;
 
         }
-        .MiddleNote{
+        .middle-note{
             color: #3ea9be;
             font-size: 17px;
             font-weight: bolder;
@@ -216,7 +216,7 @@
             padding-right: 45%;
 
         }
-        .BoottomNote{
+        .bottom-note{
             font-size: 12px;
             font-weight: bolder;
             flex-basis: 30%;
@@ -253,31 +253,31 @@
             width: 150px;
 
         }
-        .MiddleImage{
+        .middle-image{
             display: none;
         }
-        .Menu1{
+        .menu1{
             display: flex;
             flex-direction: row;
             justify-content: space-around;
         }
-        .Navigation{
+        .navigation{
             display: none;
         }
-        .DropdownMenu{
+        .dorpdown-menu{
             display: none;
         }
 
 
     }
     @media (min-width: 650px) and (max-width: 1000px){
-        .ThirthPanel{
+        .thirth-panel{
             background: #ffffff;
             display: grid;
             grid-template:  10% 10% 25% 30% 5% 20%/2fr 1fr;
 
         }
-        .ThirthPanelFirstLine{
+        .thirth-panel-first-line{
             font-size: 17px;
             flex-basis: 30%;
             grid-area: 3/1/4/3;
@@ -288,11 +288,11 @@
 
 
         }
-        .Sect{
+        .sect{
             display: none;
 
         }
-        .MiddleNote{
+        .middle-note{
             color: #3ea9be;
             font-size: 17px;
             font-weight: bolder;
@@ -302,7 +302,7 @@
             padding-right: 35%;
 
         }
-        .BoottomNote{
+        .bottom-note{
             font-size: 12px;
             font-weight: bolder;
             flex-basis: 30%;
@@ -310,22 +310,22 @@
             padding-left: 8%;
             padding-right: 45%;
         }
-        .MiddleImage{
+        .middle-image{
             display: block;
             grid-area: 4/2/7/3;
             margin-left: -40%;
             width: 110%;
 
         }
-        .Menu1{
+        .menu1{
             display: flex;
             flex-direction: row;
             justify-content: space-around;
         }
-        .Navigation{
+        .navigation{
             display: none;
         }
-        .DropdownMenu{
+        .dorpdown-menu{
             display: none;
         }
         .BottomBut{
@@ -363,14 +363,14 @@
     }
     @media (max-width: 650px) {
 
-        .ThirthPanel{
+        .thirth-panel{
             background: #ffffff;
             display: flex;
             flex-direction: column;
 
 
         }
-        .ThirthPanelFirstLine{
+        .thirth-panel-first-line{
             font-size: 17px;
             flex-basis: 30%;
 
@@ -381,11 +381,11 @@
 
 
         }
-        .Sect{
+        .sect{
             display: none;
 
         }
-        .MiddleNote{
+        .middle-note{
             align-self: center;
             color: #3ea9be;
             font-size: 17px;
@@ -396,7 +396,7 @@
             padding-top: 5%;
 
         }
-        .BoottomNote{
+        .bottom-note{
             font-size: 12px;
             font-weight: bolder;
             flex-basis: 30%;
@@ -404,16 +404,16 @@
             padding-left: 8%;
             padding-right: 8%;
         }
-        .MiddleImage{
+        .middle-image{
             display: block;
             align-self: center;
             width: 80%;
 
         }
-        .Menu1{
+        .menu1{
             display: none;
         }
-        .Navigation{
+        .navigation{
             color: #000000;
             font-weight: 800;
             font-size: 12px;
@@ -422,12 +422,12 @@
             text-decoration: none;
             opacity: 0.7;
         }
-        .DropdownMenu{
+        .dorpdown-menu{
             display: none;
         }
-        .Navigation:focus ~ .DropdownMenu,
-        .Navigation:active ~ .DropdownMenu,
-        .DropdownMenu:hover{
+        .navigation:focus ~ .dorpdown-menu,
+        .navigation:active ~ .dorpdown-menu,
+        .dorpdown-menu:hover{
 
             background: #d5f2f7;
             display: block;
@@ -435,7 +435,7 @@
             margin-bottom: 10px;
             width: 100%;
             animation: menu  500ms 1 linear;
-            animation: menuitem  500ms 1 linear;
+            animation: menu-item  500ms 1 linear;
 
         }
         .BottomBut{
@@ -479,7 +479,7 @@
 
     @media (min-width: 870px) {
 
-    .TopPanel{
+    .top-panel{
 
         background: #50b7c8 url(Images/BackPlane.png)  no-repeat center center;
         background-size: 60%;
@@ -487,7 +487,7 @@
         flex-direction: column;
         justify-content: space-around;
     }
-    .scndlinetxt{
+    .scndline-txt{
         color: #1c4c55;
         font-size: 100px;
         font-weight: bolder;
@@ -495,7 +495,7 @@
         margin: 1% auto 2% auto;
         text-align: center;
     }
-    .frstlinetxt{
+    .frstline-txt{
 
         align-self: center;
         color: #ffffff;
@@ -504,13 +504,13 @@
         letter-spacing: 6px;
         text-align: center;
     }
-    .BigLogo{
+    .big-logo{
         margin-bottom: -170px;
         vertical-align: bottom;
         width: 350px;
         z-index: 2;
     }
-    .FrstPanelFrstLine{
+    .frst-panel-frst-line{
         color: #1c4c55;
         font-size: 48px;
         font-family: Bowlby+One+SC;
@@ -518,7 +518,7 @@
         margin: 200px 20% 0 20%;
         text-align: center;
     }
-    .Column{
+    .column{
         color: #1c4c55;
         flex-basis: 45%;
         font-size: 20px;
@@ -533,7 +533,7 @@
 
     @media (min-width: 560px ) and (max-width: 870px){
 
-    .TopPanel{
+    .top-panel{
 
         background: #50b7c8 url(Images/BackPlane.png)  no-repeat center center;
         background-size: 60%;
@@ -542,7 +542,7 @@
         justify-content: space-around;
 
     }
-    .scndlinetxt{
+    .scndline-txt{
         color: #1c4c55;
         font-size: 68px;
         font-weight: bolder;
@@ -550,7 +550,7 @@
         margin: 1% auto 2% auto;
         text-align: center;
     }
-    .frstlinetxt{
+    .frstline-txt{
 
         align-self: center;
         color: #ffffff;
@@ -559,13 +559,13 @@
         letter-spacing: 6px;
         text-align: center;
     }
-    .BigLogo{
+    .big-logo{
         margin-bottom: -120px;
         vertical-align: bottom;
         width: 250px;
         z-index: 2;
     }
-    .FrstPanelFrstLine{
+    .frst-panel-frst-line{
         color: #1c4c55;
         font-size: 28px;
         font-family: Bowlby+One+SC;
@@ -573,7 +573,7 @@
         margin: 150px 15% 0 15%;
         text-align: center;
     }
-    .Column{
+    .column{
         color: #1c4c55;
         flex-basis: 75%;
         font-size: 20px;
@@ -588,14 +588,14 @@
 
     @media (max-width: 560px ) {
 
-    .TopPanel{
+    .top-panel{
         background: #50b7c8 url(Images/BackPlane.png)  no-repeat center center;
         background-size: 80%;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
     }
-    .scndlinetxt{
+    .scndline-txt{
         color: #1c4c55;
         font-size: 42px;
         font-weight: bolder;
@@ -604,7 +604,7 @@
         text-align: center;
         text-align: center;
     }
-    .frstlinetxt{
+    .frstline-txt{
         align-self: center;
         color: #ffffff;
         font-weight: bolder;
@@ -612,13 +612,13 @@
         letter-spacing: 6px;
         text-align: center;
     }
-    .BigLogo{
+    .big-logo{
         margin-bottom: -85px;
         vertical-align: bottom;
         width: 180px;
         z-index: 2;
     }
-    .FrstPanelFrstLine{
+    .frst-panel-frst-line{
         color: #1c4c55;
         font-size: 25px;
         font-weight: bolder;
@@ -626,7 +626,7 @@
         margin: 110px 7% 0 7%;
         text-align: center;
     }
-    .Column{
+    .column{
         color: #1c4c55;
         flex-basis: 85%;
         font-size: 20px;
