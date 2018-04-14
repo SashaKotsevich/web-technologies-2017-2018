@@ -1,15 +1,17 @@
 {
-  "name": "web_lab2",
+  "name": "wl2",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-    "scripts": {
-    "build": "webpack"
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "lodash": "^4.17.5"
-  }
+    "lodash": "^4.17.5",
+    "uglifyjs-webpack-plugin": "^1.2.4",
+    "webpack": "^4.5.0"
+  },
+  "dependencies": {}
 }
