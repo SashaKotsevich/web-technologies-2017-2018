@@ -1,0 +1,144 @@
+.h3st{
+    font-weight: normal;
+    margin-left: 40px;
+}
+
+.h1st{
+    font-size: 30px;
+    font-weight: normal;
+    margin-left: 40px;
+}
+
+.pst{
+    margin-left: 40px;
+}
+
+.bodyst{
+    background: #ede7f6;
+    font-family: Arial;
+}
+
+.articlest{
+    font-size: 18px;
+    margin-top: 35px;
+}
+
+.headerst{
+    background: #673ab7;
+    height: 250px;
+    margin: -8px;
+
+}
+
+.footerst{
+    color: #757575;
+    font-size: 12px;
+    margin: -120px auto;
+    text-align: center;
+    width: 580px;
+
+}
+
+.add-file-inp{
+    opacity: 0;
+    z-index: 0;
+}
+
+.add-file-button{
+    color: #0000ff;
+    font-weight: lighter;
+    height: 20px;
+    margin-left: -217px;
+    text-transform: uppercase;
+    width: 80px;
+
+}
+
+.astrix{
+    color:#ff0000;
+}
+
+.bottom-hint{
+    color: #757575;
+    font-size: 12px;
+}
+
+.check{
+    height: 18px;
+    width: 18px;
+}
+
+.content-top-line{
+    background: #b388ff;
+    height: 8px;
+}
+
+.content-panel{
+    background: white;
+    box-shadow: 0px 0px 1px #000000;
+    margin: -120px auto 130px auto;
+    width: 585px;
+    z-index: 2;
+}
+
+.date{
+    border: none;
+    border-bottom: 1px solid #b5b9b9;
+    margin-left: 40px;
+    height: 35px;
+}
+
+.hint{
+    color: #ff0000;
+    font-size: 14px;
+}
+
+.input-text-style{
+    border: none;
+    border-bottom: dotted 1px gray;
+    margin-left: 40px;
+    width: 250px;
+}
+
+.inp-text1{
+    border-right: none;
+    border-left: none;
+    border-bottom: dotted 1px  #808080;
+    border-top: none;
+    margin-left: 40px;
+    width: 500px;
+}
+
+.other-input-text-style{
+    border: none;
+    border-bottom: dotted 1px  #808080;
+}
+
+.radio{
+    background: #ffffff;
+    border: 2px;
+    height: 18px;
+    width: 18px;
+}
+
+.select{
+    border: none;
+    color: #bababa;
+    height: 30px;
+    margin-left: 40px;
+    width: 80px;
+}
+
+.submit{
+    background: #4285f4;
+    border: none ;
+    border-radius: 5px;
+    color: white;
+    height: 35px;
+    margin-left: 40px;
+    width: 85px;
+
+}
+
+
+
