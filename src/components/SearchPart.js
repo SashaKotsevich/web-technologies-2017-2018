@@ -3,7 +3,13 @@ import '../index.css';
 import {connect} from 'react-redux';
 import request from '../api.js';
 
-
+class icon extends React.Component{
+    render(){
+        return(
+        <i className={this.props.class} aria-hidden="true"></i>
+        );
+    }
+}
 
 class SearchInfo extends React.Component{
     render(){
@@ -15,14 +21,16 @@ class SearchInfo extends React.Component{
                 <p className="login">{this.props.data.login}</p>
                 <p className="bio">{this.props.data.bio}</p>
                 <hr className="hr_line"/>
-                <div className="company_line"> <i className="fa fa-users" aria-hidden="true"></i> <p className="company">{this.props.data.company}</p></div>
-                <div className="marker_line"><i className="fa fa-map-marker " aria-hidden="true"></i><p className="location">{this.props.data.location}</p></div>
-                <div className="email_line"><i className="fa fa-envelope" aria-hidden="true"></i><a className="email" src={this.props.data.email}>{this.props.data.email}</a></div>
-                <div className="blog_line"><i className="fa fa-retweet" aria-hidden="true"></i><a className="blog" src={this.props.data.blog}>{this.props.data.blog}</a></div>
+                <div className="company_line"> <icon class="fa fa-users"/> <p className="company">{this.props.data.company}</p></div>
+                <div className="marker_line"><icon class="fa fa-map-marker "/><p className="location">{this.props.data.location}</p></div>
+                <div className="email_line"><icon class="fa fa-envelope" /><a className="email" src={this.props.data.email}>{this.props.data.email}</a></div>
+                <div className="blog_line"><icon class="fa fa-retweet" /><a className="blog" src={this.props.data.blog}>{this.props.data.blog}</a></div>
             </div>
         );
     }
 }
+
+
 
 
 class SearchPart extends React.Component{
