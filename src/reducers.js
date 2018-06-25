@@ -35,12 +35,27 @@ const initialSearchState = {
        let newstate=state;
        newstate[action.ct]=action.txt;
        newstate.currenttab=action.ct;
-       return   newstate;
+       return newstate;
        }
        return state;
   }
+const initialFolloversState=["empty"];
+
+ const FollowersReducer= (state = initialFolloversState, action)=> {
+  let newlistfollowers=state;
+  if(action.type==='Follow_Rqst') {
+    
+      
+     
+      return action.data.map(item=>{
+        return item['login'];
+        });
+    }   
+  return state; 
+}
 
   export default combineReducers({
     SearchReducer,
-     TabsReducer
+     TabsReducer,
+     FollowersReducer
   });

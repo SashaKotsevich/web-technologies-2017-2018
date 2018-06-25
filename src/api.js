@@ -14,7 +14,7 @@ function api(url) {
     }
     
     function request(login) {
-        let url = `https://api.github.com/users/${login}`;
+        let url = login;
         return api(url);
     }
 

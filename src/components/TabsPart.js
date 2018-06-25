@@ -9,14 +9,14 @@ import {connect} from 'react-redux';
         document.getElementById("second_tab").className="button_emphasis_none";
         document.getElementById("third_tab").className="button_emphasis_none";
         document.getElementById(event.target.className).className="button_emphasis";
-        this.props.changetab(event.target.className,this.props.state.TabsReducer[event.target.className])
-        document.getElementById("TextArea").value=this.props.state.TabsReducer[this.props.state.TabsReducer.currenttab];
+        this.props.changetab(event.target.className,this.props.state[event.target.className])
+        document.getElementById("TextArea").value=this.props.state[this.props.state.currenttab];
         
     }
 
    handletab=(event)=>{
      
-        this.props.changetab(this.props.state.TabsReducer.currenttab,event.target.value);
+        this.props.changetab(this.props.state.currenttab,event.target.value);
       
     }
    textediting=(event)=>{
@@ -39,7 +39,7 @@ import {connect} from 'react-redux';
                     <input type="button" value="edit" className="button_edit" onClick={this.textediting} /> 
                 </div>
                 
-                {  <textarea className="tab_text" id="TextArea" disabled onChange={this.handletab}/> } }
+                {  <textarea className="tab_text" id="TextArea" disabled onChange={this.handletab}/> } 
             </div>
         )
     }
@@ -48,7 +48,7 @@ import {connect} from 'react-redux';
 
 export default connect(
     state=>({
-     state
+     state:state.TabsReducer
               
     }),
     dispatch =>({
