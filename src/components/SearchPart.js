@@ -44,6 +44,8 @@ class SearchPart extends React.Component{
          this.props.changefollows("https://api.github.com/users/"+searchitem+'/followers');
          this.props.changeorgs("https://api.github.com/users/"+searchitem+'/orgs');
          this.props.changerepos("https://api.github.com/users/"+searchitem+'/repos');
+         this.props.changetoppopular('https://api.github.com/search/repositories?q=stars%3A%3E0&sort=stars&per_page=5');
+         this.props.changetopgrowing('https://api.github.com/search/repositories?q=trending%3A%3E0&sort=stars&per_page=5&since=weekly&#39');
         }
         else{alert("Заполните поле поиска")}
 
@@ -85,7 +87,16 @@ class SearchPart extends React.Component{
         },
         changetab: (data) =>{
             dispatch({type:"ChangeTabData", data:data})
-     }
+        },
+        changetoppopular: (link) =>{
+            dispatch({type:"ChangeTopPopular", link:link})
+
+        },
+        changetopgrowing: (link) =>{
+            dispatch({type:"ChangeTopGrowing", link:link})
+
+        }
+
         
     })
     

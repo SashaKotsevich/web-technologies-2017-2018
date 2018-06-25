@@ -18,6 +18,8 @@ class TabsMenu extends React.Component{
             <Link to="/followers" className="default_tab_button" onClick={this.activetab} >Фоловеры</Link>
             <Link to="/repos" className="default_tab_button" onClick={this.activetab} >Репозитории</Link>
             <Link to="/orgs" className="default_tab_button" onClick={this.activetab} >Организации</Link>
+            <Link to="/topstarrepos" className="default_tab_button" onClick={this.activetab} >По популярн.</Link>
+            <Link to="/topgrowing" className="default_tab_button" onClick={this.activetab} >Быстророст.</Link>
 
             </div>
         )

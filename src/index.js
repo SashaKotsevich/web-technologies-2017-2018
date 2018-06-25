@@ -13,6 +13,8 @@ import ContactsTab from './components/Tabs/ContactsTabComponent';
 import FollowersTab from './components/Tabs/FollowersTabComponent';
 import RepositoriesTab from './components/Tabs/RepositoriesTabComponent';
 import OrgsTab from './components/Tabs/OrgsTabComponent';
+import TopStarReposTab from './components/Tabs/TopStarReposTabComponent';
+import TopGrowingTab from './components/Tabs/TopGrowingTabComponent';
 import mySaga from './sagas'
 import createSagaMiddleware from 'redux-saga'
 const sagaMiddleware = createSagaMiddleware()
@@ -37,6 +39,8 @@ ReactDOM.render(
     <Route exact path="/followers" component={FollowersTab}/>
     <Route exact path="/repos" component={RepositoriesTab}/>
     <Route exact path="/orgs" component={OrgsTab}/>
+    <Route exact path="/topstarrepos" component={TopStarReposTab}/>
+    <Route exact path="/topgrowing" component={TopGrowingTab}/>
    
     </div>
 

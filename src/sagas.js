@@ -36,11 +36,31 @@ function* fetchUser(action) {
     }
  }
 
+ function* fetchTopPopular(action){
+  try {
+     const data = yield call(request, action.link);
+     yield put({type: "TOPPOPULAR_FETCH_SUCCEEDED", data: data});
+  } catch (e) {
+     yield put({type: "TOPPOPULAR_FETCH_FAILED", message: e.message});
+  }
+}
+
+function* fetchTopGrowing(action){
+  try {
+     const data = yield call(request, action.link);
+     yield put({type: "TOPGROWING_FETCH_SUCCEEDED", data: data});
+  } catch (e) {
+     yield put({type: "TOPGROWING_FETCH_FAILED", message: e.message});
+  }
+}
+
  function* mySaga() {
     yield takeEvery("ChangeUser", fetchUser);
     yield takeEvery("ChangeRepos", fetchRepos);
     yield takeEvery("ChangeOrgs", fetchOrgs);
     yield takeEvery("ChangeFollows", fetchFollows);
+    yield takeEvery("ChangeTopPopular", fetchTopPopular);
+    yield takeEvery("ChangeTopGrowing", fetchTopGrowing);
   }
 
   export default mySaga;
