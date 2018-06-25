@@ -111,32 +111,38 @@ body {
     margin-top: 2%;
     
 }
-.tab_text{
-    width: 900px;
+.default_tabs{
+    
+    display: block;
+    width: 800px;
     height: 500px;
     margin: 0;
 }
-.first_tab{
-    margin: 1% 0 0 1%;
-    height: 30px;
+.default_tab_button{
+    margin: 0 5px 5px 1%;
+    padding: 5px;
     width: 100px;
-}
-.second_tab{
+    background-color: #a9a9a9;
     
-    margin: 1% 0 0 1%;
-    height: 30px;
+    color:black;
+    border-radius: 10px;
+    text-decoration: none;
+}
+.active_tab_button{
+    margin: 0 5px 5px 1%;
+    padding: 5px;
     width: 100px;
-    
+    background-color: #a9a9a9;
+    border: 4px solid rgb(8, 247, 8);
+    color:black;
+    border-radius: 10px;
+    text-decoration: none;
 }
-.third_tab{
-    
-    margin: 1% 0 0 1%;
-    height: 30px;
-    width: 100px;
-}
+
+
 .button_edit{
     
-    margin: 1px 0 0 1%;
+    margin: 5px 0 5px 770px;
     height: 30px;
     width: 100px;
 }
@@ -161,6 +167,7 @@ body {
 }
 .ScrollPanel{
     display: block;
-    height: 400px;
-    width:200px;
+    margin-top:10px;
+    height: 500px;
+    width:800px;
 }

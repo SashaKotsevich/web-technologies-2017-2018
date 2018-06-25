@@ -2,14 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import SearchPart from './components/SearchPart';
-import TabsPart from './components/TabsPart';
-import FollowersPart from './components/Followers';
 import {createStore} from 'redux';
 import {Provider} from 'react-redux';
-import reducers from './reducers';
+import TabsReducer from './reducer';
 import {HashRouter as Router, Route} from 'react-router-dom'; 
-import Menu from './components/Menu'
-const store =createStore(reducers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+import TabsMenu from './components/Tabs/TabsMenu';
+import BasicTab from './components/Tabs/BasicTabComponent';
+import EducationTab from './components/Tabs/EducationTabComponent';
+import ContactsTab from './components/Tabs/ContactsTabComponent';
+import FollowersTab from './components/Tabs/FollowersTabComponent';
+import RepositoriesTab from './components/Tabs/RepositoriesTabComponent';
+import OrgsTab from './components/Tabs/OrgsTabComponent';
+
+const store =createStore(TabsReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 ReactDOM.render(
   <Provider store={store}>
@@ -23,9 +28,14 @@ ReactDOM.render(
   <Provider store={store}>
    <Router>
      <div>
-    <Route path='/' component={Menu} />
-    <Route exact path="/" component={TabsPart}/>
-    <Route exact path="/followers" component={FollowersPart}/>
+    <Route path='/' component={TabsMenu} />
+    <Route exact path="/" component={BasicTab}/>
+    <Route exact path="/education" component={EducationTab}/>
+    <Route exact path="/contacts" component={ContactsTab}/>
+    <Route exact path="/followers" component={FollowersTab}/>
+    <Route exact path="/repos" component={RepositoriesTab}/>
+    <Route exact path="/orgs" component={RepositoriesTab}/>
+   
     </div>
 
    </Router>
