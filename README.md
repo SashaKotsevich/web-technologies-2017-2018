@@ -1,4 +1,7 @@
 # web-technologies-2017-2018
+
+HEROKU LINK: https://sashakotsevichapp.herokuapp.com/movies
+
 примеры запросов:
 /movies 
 /movies/5
