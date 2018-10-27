@@ -2,6 +2,8 @@
 
 HEROKU LINK: https://sashakotsevichapp.herokuapp.com/movies
 
+swagger: https://app.swaggerhub.com/apis/WebTeam6/Weblab1/0.1
+
 примеры запросов:
 /movies 
 /movies/5
