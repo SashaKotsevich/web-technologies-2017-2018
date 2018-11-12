@@ -1,21 +1,25 @@
 <?php
-function getFormData($method) {
- 
- // GET  POST: 
- if ($method === 'GET') return $_GET;
- if ($method === 'POST') return $_POST;
+function getFormData($method)
+{
 
- // PUT, PATCH или DELETE
- $data = array();
- $exploded = explode('&', file_get_contents('php://input'));
+    // GET  POST:
+    if ($method === 'GET') {
+        return $_GET;
+    }
+    if ($method === 'POST') {
+        return $_POST;
+    }
 
- foreach($exploded as $pair) {
-     $item = explode('=', $pair);
-     if (count($item) == 2) {
-         $data[urldecode($item[0])] = urldecode($item[1]);
-     }
- }
+    // PUT, PATCH или DELETE
+    $data = array();
+    $exploded = explode('&', file_get_contents('php://input'));
 
- return $data;
+    foreach ($exploded as $pair) {
+        $item = explode('=', $pair);
+        if (count($item) == 2) {
+            $data[urldecode($item[0])] = urldecode($item[1]);
+        }
+    }
+
+    return $data;
 }
-?>

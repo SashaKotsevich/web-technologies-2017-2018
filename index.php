@@ -12,5 +12,4 @@ $router = $urls[0];
 $urlData = array_slice($urls, 1);
 
 include_once 'routers/' . $router . '.php';
-route($method, $urlData, $formData);
-?>
+echo (ucfirst($router)."Route")::route($method, $urlData, $formData);
