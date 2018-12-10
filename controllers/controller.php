@@ -2,55 +2,52 @@
 
 class MainController
 {
-
-    public static function output_all($filedata)
-    {
-        return $filedata;
+    public $dbConnection;
+    function __construct(){
+        $this->dbConnection= new PDO('mysql:dbname=webbd;host=localhost', 'root', '');
     }
 
-    public static function output_with_id($id, $filedata)
+    public  function output_all()
     {
-        $data = json_decode($filedata, true);
-        foreach ($data as $key => $value) {
-            if ($id === (int) $value['id']) {
-                return json_encode($value);
-
-            }
-        }
-        return json_encode(array(
-            'error' => 'Not Found',
-        ));
+        $sth =$this->dbConnection->prepare("SELECT * FROM `movies`");
+    $sth->execute();
+        return json_encode($sth->fetch(PDO::FETCH_ASSOC));
     }
 
-    public static function output_with_pagination($offset, $limit, $filedata)
+    public function output_with_id($id)
     {
-        $data = json_decode($filedata, true);
-        $result = array_slice($data, $offset, $limit);
-        return json_encode($result);
+        $sth= $this->dbConnection->prepare("SELECT * FROM `movies` WHERE `id`=?");
+        $sth->execute(array($id));
+        return json_encode($sth->fetch(PDO::FETCH_ASSOC));
     }
 
-    public static function output_with_search($search_value, $filedata)
+    public function output_with_pagination($offset, $limit, $filedata)
     {
-        $result = array();
-        $data = json_decode($filedata, true);
-        foreach ($data as $key => $value) {
-            if (strstr($value['title'], $search_value)) {
-                array_push($result, $value);
-            }
-        }
-        return json_encode($result);
+        $sth= $this->dbConnection->prepare("SELECT * FROM `movies` WHERE `id`>? LIMIT ?");
+        $sth->execute(array($id,$offset));
+        return json_encode($sth->fetch(PDO::FETCH_ASSOC));
     }
 
-    public static function output_with_sort($sort_direction_int, $field, $filedata)
+    public function output_with_search($search_value)
     {
-        $data = json_decode($filedata, true);
-        include_once 'sortfunctions/sort_functions.php';
-        $sort_direction = '';
+        $sth= $this->dbConnection->prepare("SELECT * FROM `movies` WHERE `title`=?");
+        $sth->execute(array($search_value));
+        return json_encode($sth->fetch(PDO::FETCH_ASSOC));
+    }
+
+    public function output_with_sort($sort_direction_int, $field)
+    {
+        
         if ($sort_direction_int === 1) {
-            $sort_direction = '_reverse';
+            $sth= $this->dbConnection->prepare("SELECT * FROM `movies` ORDER BY ?");
+            $sth->execute(array($field));
+            return json_encode($sth->fetch(PDO::FETCH_ASSOC));
+        }else{
+            $sth= $this->dbConnection->prepare("SELECT * FROM `movies` ORDER BY ? DESC");
+            $sth->execute(array($field));
+            return json_encode($sth->fetch(PDO::FETCH_ASSOC));
         }
-        usort($data,$field . '_sort' . $sort_direction);
-        return json_encode($data);
+        
     }
 
 }

@@ -6,27 +6,29 @@ class MoviesRoute
     {
         require_once "controllers/controller.php";
         require_once "config.php";
-        $filedata = file_get_contents($filepath);
+
         if ($method === "GET") {
+            $db=new MainController();
+
             if (count($urlData) === 0) {
 
-                return MainController::output_all($filedata);
+                return $db->output_all();
 
             } elseif ($urlData[0] === 'search') {
 
-                return MainController::output_with_search($formData['title'], $filedata);
+                return $db->output_with_search($formData['title']);
 
             } elseif ($urlData[0] === 'pagination') {
 
-                return MainController::output_with_pagination((int) $formData['offset'], (int) $formData['limit'], $filedata);
+                return $db->output_with_pagination((int) $formData['offset'], (int) $formData['limit']);
 
             } elseif ($urlData[0] === 'sort') {
 
-                return MainController::output_with_sort((int) $formData['sort_direction'], $formData['field'], $filedata);
+                return $db->output_with_sort((int) $formData['sort_direction'], $formData['field']);
 
             } else {
 
-                return MainController::output_with_id((int) $urlData[0], $filedata);
+                return $db->output_with_id((int) $urlData[0]);
 
             }
         }
